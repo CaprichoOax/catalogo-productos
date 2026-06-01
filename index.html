@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-width=1.0">
+    <title>Capricho Oaxaqueño | Pedidos</title>
+    <!-- Fuentes sugeridas para dar el toque elegante y tradicional -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Enlace al futuro archivo CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ==========================================
+         BARRA DE NAVEGACIÓN SUPERIOR (HEADER)
+         ========================================== -->
+    <header class="header-principal">
+        <div class="logo-container">
+            <!-- Aquí irá el logo del Quetzal -->
+            <h1 class="logo-texto">Capricho Oaxaqueño</h1>
+        </div>
+        <button id="btn-ver-carrito" class="btn-carrito">
+            🛒 Mi Pedido (<span id="contador-carrito">0</span>)
+        </button>
+    </header>
+
+    <!-- ==========================================
+         SECCIÓN 1: BIENVENIDA Y GANCHO (HERO)
+         ========================================== -->
+    <section class="hero-section">
+        <div class="banner-fecha">
+            <h2>Próxima entrega</h2>
+            <p class="fecha-destacada">30 y 31 de Mayo</p>
+            <span class="badge-envio">ENTREGA A DOMICILIO SIN COSTO</span>
+        </div>
+        
+        <div class="hero-texto">
+            <h3>De Oaxaca a tu casa, con frescura y calidad en cada producto.</h3>
+            <ul class="lista-confianza">
+                <li>🔴 Productos 100% de Oaxaca</li>
+                <li>🔴 Productos recién llegados de Oaxaca</li>
+                <li>🔴 No pedimos anticipo</li>
+            </ul>
+            <p class="telefono-contacto">Pedidos al: <strong>442 669 22 41</strong></p>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECCIÓN 2: ¿CÓMO HACER TU PEDIDO?
+         ========================================== -->
+    <section class="como-funciona-section">
+        <h2 class="titulo-seccion">¿Cómo hacer tu pedido?</h2>
+        <p class="subtitulo-seccion">Fácil, rápido y sin complicaciones</p>
+        
+        <div class="pasos-grid">
+            <div class="paso-card">
+                <span class="paso-icono">📋</span>
+                <p><strong>1. Revisa</strong> la lista de productos.</p>
+            </div>
+            <div class="paso-card">
+                <span class="paso-icono">🛒</span>
+                <p><strong>2. Elige</strong> lo que gustes (¡desde medios kilos!).</p>
+            </div>
+            <div class="paso-card">
+                <span class="paso-icono">📲</span>
+                <p><strong>3. Envía</strong> tu pedido por WhatsApp.</p>
+            </div>
+            <div class="paso-card">
+                <span class="paso-icono">🏠</span>
+                <p><strong>4. Recibe y paga</strong> en casa (Efectivo o Transferencia).</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECCIÓN 3: CATÁLOGO DE PRODUCTOS
+         ========================================== -->
+    <section class="catalogo-section">
+        <h2 class="titulo-seccion">Nuestro Menú Tradicional</h2>
+        
+        <!-- Contenedor donde el futuro JavaScript (SheetDB) inyectará los productos -->
+        <div id="contenedor-productos" class="menu-categorias">
+            
+            <!-- Estructura de Ejemplo: Categoría Carnes -->
+            <div class="categoria-bloque">
+                <h3 class="categoria-titulo">Carnes</h3>
+                
+                <div class="producto-item" data-id="PROD-001">
+                    <div class="producto-info">
+                        <h4 class="producto-nombre">Tasajo</h4>
+                        <p class="producto-presentacion">1 K</p>
+                        <p class="producto-precio">$470.00</p>
+                    </div>
+                    <div class="producto-controles">
+                        <button class="btn-restar">-</button>
+                        <span class="cantidad-actual">0</span>
+                        <button class="btn-sumar">+</button>
+                    </div>
+                </div>
+
+                <div class="producto-item" data-id="PROD-002">
+                    <div class="producto-info">
+                        <h4 class="producto-nombre">Cecina Enchilada</h4>
+                        <p class="producto-presentacion">1 K</p>
+                        <p class="producto-precio">$280.00</p>
+                    </div>
+                    <div class="producto-controles">
+                        <button class="btn-restar">-</button>
+                        <span class="cantidad-actual">0</span>
+                        <button class="btn-sumar">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Estructura de Ejemplo: Categoría Quesos -->
+            <div class="categoria-bloque">
+                <h3 class="categoria-titulo">Quesos</h3>
+                
+                <div class="producto-item" data-id="PROD-003">
+                    <div class="producto-info">
+                        <h4 class="producto-nombre">Queso Oaxaca</h4>
+                        <p class="producto-presentacion">1 K</p>
+                        <p class="producto-precio">$285.00</p>
+                    </div>
+                    <div class="producto-controles">
+                        <button class="btn-restar">-</button>
+                        <span class="cantidad-actual">0</span>
+                        <button class="btn-sumar">+</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FOOTER INFORMATIVO
+         ========================================== -->
+    <footer class="footer-principal">
+        <p>Capricho Oaxaqueño &copy; 2026</p>
+        <p>Desarrollado por <strong>Nuu Tech-Art</strong></p>
+    </footer>
+
+    <!-- ==========================================
+         BARRA FLOTANTE DE TOTAL (STICKY BOTTOM BAR)
+         ========================================== -->
+    <div id="barra-flotante" class="barra-total-fija">
+        <div class="total-info">
+            <span>Total estimado:</span>
+            <strong id="monto-total">$0.00</strong>
+        </div>
+        <button id="btn-finalizar-pedido" class="btn-primario">Completar Pedido</button>
+    </div>
+
+    <!-- ==========================================
+         VENTANA MODAL PARA DATOS DE ENTREGA
+         ========================================== -->
+    <div id="modal-checkout" class="modal-oculto">
+        <div class="modal-contenido">
+            <button id="btn-cerrar-modal" class="btn-cerrar">X</button>
+            <h2 class="titulo-modal">Datos de Entrega</h2>
+            <p>Déjanos tus datos para llevarte tu pedido hasta la puerta de tu casa.</p>
+            
+            <form id="formulario-pedido" class="formulario-datos">
+                <div class="campo-form">
+                    <label for="nombre-cliente">Nombre Completo:</label>
+                    <input type="text" id="nombre-cliente" placeholder="Ej. Juan Pérez" required>
+                </div>
+                
+                <div class="campo-form">
+                    <label for="telefono-cliente">Teléfono (WhatsApp):</label>
+                    <input type="tel" id="telefono-cliente" placeholder="Ej. 442 123 4567" required>
+                </div>
+
+                <div class="campo-form">
+                    <label for="direccion-cliente">Dirección completa de entrega:</label>
+                    <textarea id="direccion-cliente" rows="3" placeholder="Calle, Número, Colonia, Código Postal y Referencias" required></textarea>
+                </div>
+
+                <button type="submit" id="btn-enviar-whatsapp" class="btn-whatsapp">
+                    Enviar pedido por WhatsApp 📲
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Enlace al futuro archivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
