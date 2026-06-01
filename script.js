@@ -4,7 +4,7 @@
 
 // 1. Configuración de la API
 // IMPORTANTE: Aquí vas a pegar la URL que te dé SheetDB cuando conectes tu Excel.
-const SHEETDB_URL = 'https://sheetdb.io/api/v1/AQUI_VA_TU_API_KEY'; 
+const SHEETDB_URL = 'https://sheetdb.io/api/v1/nmr4tdvxiylms'; 
 
 // 2. Variables de Estado (La memoria de nuestra página)
 let catalogoProductos = []; // Guardará todos los productos que descargue de Sheets
