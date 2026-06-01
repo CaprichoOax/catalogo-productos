@@ -1,0 +1,451 @@
+/* ==========================================
+   VARIABLES DE COLOR Y ESTILOS GLOBALES
+   ========================================== */
+:root {
+    --color-fondo: #0a0a0a;       /* Negro profundo de tus flyers */
+    --color-texto: #ffffff;       /* Texto blanco para máximo contraste */
+    --color-dorado: #F4D03F;      /* Dorado/Amarillo de los títulos */
+    --color-rojo: #D32F2F;        /* Rojo de las etiquetas "Sin anticipo" */
+    --color-verde-wa: #25D366;    /* Verde oficial de WhatsApp */
+    --color-tarjeta: #1a1a1a;     /* Gris muy oscuro para separar elementos */
+    --color-blanco-puro: #ffffff; 
+    
+    --fuente-titulos: 'Playfair Display', serif; /* Elegante y artesanal */
+    --fuente-textos: 'Montserrat', sans-serif;   /* Limpia y moderna */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: var(--fuente-textos);
+    line-height: 1.6;
+    /* Espacio inferior para que la barra flotante no tape el contenido */
+    padding-bottom: 90px; 
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--fuente-titulos);
+    color: var(--color-dorado);
+    font-weight: 600;
+}
+
+/* ==========================================
+   BARRA DE NAVEGACIÓN (HEADER)
+   ========================================== */
+.header-principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: rgba(10, 10, 10, 0.95);
+    border-bottom: 2px solid var(--color-dorado);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-texto {
+    font-size: 1.5rem;
+    color: var(--color-texto);
+    letter-spacing: 1px;
+}
+
+.btn-carrito {
+    background-color: transparent;
+    color: var(--color-dorado);
+    border: 1px solid var(--color-dorado);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-family: var(--fuente-textos);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-carrito:hover {
+    background-color: var(--color-dorado);
+    color: var(--color-fondo);
+}
+
+/* ==========================================
+   SECCIÓN 1: HERO (BIENVENIDA)
+   ========================================== */
+.hero-section {
+    text-align: center;
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.banner-fecha {
+    background-color: var(--color-tarjeta);
+    border: 2px dashed var(--color-dorado);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.fecha-destacada {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-texto);
+    margin: 10px 0;
+}
+
+.badge-envio {
+    display: inline-block;
+    background-color: var(--color-rojo);
+    color: var(--color-blanco-puro);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+.hero-texto h3 {
+    font-size: 1.4rem;
+    color: var(--color-texto);
+    margin-bottom: 20px;
+    font-family: var(--fuente-textos);
+    font-weight: 400;
+}
+
+.lista-confianza {
+    list-style: none;
+    text-align: left;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.lista-confianza li {
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+.telefono-contacto {
+    font-size: 1.2rem;
+    color: var(--color-dorado);
+}
+
+/* ==========================================
+   SECCIÓN 2: ¿CÓMO FUNCIONA?
+   ========================================== */
+.como-funciona-section {
+    background-color: var(--color-texto); /* Fondo blanco para contraste */
+    color: var(--color-fondo); /* Texto negro */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.titulo-seccion {
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+}
+
+.como-funciona-section .titulo-seccion {
+    color: var(--color-fondo);
+}
+
+.subtitulo-seccion {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.pasos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.paso-card {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.paso-icono {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+/* ==========================================
+   SECCIÓN 3: CATÁLOGO DE PRODUCTOS
+   ========================================== */
+.catalogo-section {
+    padding: 50px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.catalogo-section .titulo-seccion {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--color-dorado);
+}
+
+.categoria-bloque {
+    margin-bottom: 40px;
+}
+
+.categoria-titulo {
+    font-size: 1.8rem;
+    border-bottom: 1px solid var(--color-dorado);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.producto-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-tarjeta);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.2s;
+}
+
+.producto-item:hover {
+    transform: translateX(5px);
+    border-left: 3px solid var(--color-dorado);
+}
+
+.producto-nombre {
+    font-size: 1.1rem;
+    color: var(--color-texto);
+    font-family: var(--fuente-textos);
+    margin-bottom: 2px;
+}
+
+.producto-presentacion {
+    font-size: 0.85rem;
+    color: #aaaaaa;
+}
+
+.producto-precio {
+    color: var(--color-dorado);
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-top: 5px;
+}
+
+/* Controles de cantidad "Cero Fricción" */
+.producto-controles {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.btn-restar, .btn-sumar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--color-dorado);
+    color: var(--color-fondo);
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-restar:active, .btn-sumar:active {
+    transform: scale(0.9);
+}
+
+.cantidad-actual {
+    font-size: 1.2rem;
+    font-weight: bold;
+    min-width: 20px;
+    text-align: center;
+}
+
+/* ==========================================
+   BARRA FLOTANTE DE TOTAL
+   ========================================== */
+.barra-total-fija {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-tarjeta);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.5);
+    z-index: 900;
+    border-top: 1px solid #333;
+}
+
+.total-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.total-info span {
+    font-size: 0.85rem;
+    color: #aaa;
+}
+
+.total-info strong {
+    font-size: 1.4rem;
+    color: var(--color-dorado);
+}
+
+.btn-primario {
+    background-color: var(--color-dorado);
+    color: var(--color-fondo);
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: var(--fuente-textos);
+}
+
+/* ==========================================
+   VENTANA MODAL (CHECKOUT / FORMULARIO)
+   ========================================== */
+.modal-oculto {
+    display: none; /* Oculto por defecto */
+}
+
+/* Esta clase se añadirá con JS para mostrar el modal */
+.modal-activo {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.modal-contenido {
+    background-color: var(--color-blanco-puro);
+    color: var(--color-fondo);
+    width: 100%;
+    max-width: 400px;
+    padding: 30px 20px;
+    border-radius: 15px;
+    position: relative;
+}
+
+.btn-cerrar {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #666;
+    cursor: pointer;
+}
+
+.titulo-modal {
+    color: var(--color-fondo);
+    font-family: var(--fuente-textos);
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+}
+
+.modal-contenido p {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.formulario-datos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.campo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.campo-form label {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.campo-form input, 
+.campo-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: var(--fuente-textos);
+    font-size: 1rem;
+}
+
+.campo-form input:focus, 
+.campo-form textarea:focus {
+    outline: none;
+    border-color: var(--color-dorado);
+    box-shadow: 0 0 5px rgba(244, 208, 63, 0.5);
+}
+
+.btn-whatsapp {
+    background-color: var(--color-verde-wa);
+    color: var(--color-blanco-puro);
+    border: none;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.2s;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1EBE5D;
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+.footer-principal {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid var(--color-tarjeta);
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.footer-principal strong {
+    color: var(--color-dorado);
+}
